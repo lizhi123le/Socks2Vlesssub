@@ -105,7 +105,7 @@ export default {
 
                     const 落地国家 = socks5带地址.split('#').length > 1 ? socks5带地址.split('#')[1] : host名称;
 
-                    const link = `${协议类型}://${uuid}@${优选域名}:${优选端口}?encryption=none&security=tls&sni=${host}&alpn=h3,h2&fp=randomized&type=ws&host=${host}&path=%2F${encodeURIComponent(socks5)}&allowInsecure=1&fragment=1,40-60,30-50,tlshello#${encodeURIComponent(落地国家)}`;
+                    const link = `${协议类型}://${uuid}@${优选域名}:${优选端口}?encryption=none&security=tls&sni=${host}&alpn=h3,h2&fp=randomized&type=ws&host=${host}&path=%2F${encodeURIComponent(socks5)}&allowInsecure=0&fragment=1,40-60,30-50,tlshello#${encodeURIComponent(落地国家)}`;
                     return link;
                 }).join('\n');
 
